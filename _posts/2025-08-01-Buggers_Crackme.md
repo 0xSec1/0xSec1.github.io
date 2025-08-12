@@ -1,7 +1,7 @@
 ---
 title: "Buggers v.5 CrackMe"
 date: 2025-08-02
-categories: [CrackMe,Windows]
+categories: [Windows CrackMe]
 tags: [reversing,crackme]
 ---
 
