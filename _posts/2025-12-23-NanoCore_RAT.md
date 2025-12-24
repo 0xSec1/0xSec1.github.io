@@ -11,7 +11,7 @@ Nanocore is a [Remote Access Tool](https://www.malwarebytes.com/blog/threats/rem
 SAMPLE - `sha256 da551ab6e000732499227a67f2be68d1256b58d95963a903cc316e2730db9d1e`
 
 ## Static Analysis - Stage 1
-On analyzing the hash in [virustotal](www.virustotal.com) I found out that it was marked malicious by `54` vendors and in malware bazaar it was detected by `19` vendors as of now. And its a multi stage malware further revealing configs of malware and its key details
+On analyzing the hash in [virustotal](https://www.virustotal.com) I found out that it was marked malicious by `54` vendors and in malware bazaar it was detected by `19` vendors as of now. And its a multi stage malware further revealing configs of malware and its key details
 
 ![virustotal](./assets/lib/nanocore/virustotal.png)
 *Figure 1: Virustotal*
