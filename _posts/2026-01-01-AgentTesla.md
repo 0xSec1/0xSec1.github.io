@@ -1,6 +1,6 @@
 ---
 title: "AgentTesla Analysis"
-date: 2025-12-26
+date: 2026-01-01
 categories: [Malware]
 tags: [malware,infostealer]
 ---
@@ -240,3 +240,29 @@ Now it calls the decompression function and handles success and failure.
 *Figure 20: Handles success and failure*
 
 Now coming back to main function now it clear out the memory allocated for `v12` and skips first `14 bytes` so that it points exactly at payload `v17 = v16 + 14;`. Then it load some library since AgentTesla is a .NET based malware so something related to that might be `mscoree.dll` which is core library of .NET framework. And after it setup required things for .NET it then executes the decompressed malware in memory. The Agent Tesla now begins searching for Chrome passwords, Outlook emails, and FTP credentials.
+
+![ida_second3](./assets/lib/agentesla/ida_second3.png)
+*Figure 21: Dump everything from running process*
+
+Now lets see how can we extract the malware confiurations, first i ran the malware and let it execute for 30 seconds to complete all its needed things so that the final payload start executing keeping [SystemInformer](https://systeminformer.sourceforge.io/) opened. Then go to properties of the process and go in to memory tab and look for the `RWX` protection and there i saw a memory address mapped of `256kb` that caught my attention. Then i used [procdump](https://learn.microsoft.com/en-us/sysinternals/downloads/procdump) to dump out everything from running process. Now i ran strings on the dmp file and stored it in a new file.
+
+![ioc](./assets/lib/agentesla/ioc.png)
+*Figure 22: Extracting important info*
+
+![ioc1](./assets/lib/agentesla/ioc1.png)
+*Figure 23: C2 domains and email with password*
+
+Since its a infostealer I searched for things like Opera, Chrome and I got it, it was extracting each of these info including FTP, SFTP, logging keystrokes, system information, VNC passwords and so on. I also find the domain it is communicating to share these informations `mail.cottondreams.org` and email addresses `kc@cottondreams.org, admin@cottondreams.org` and a likely a password `PayDay2025`.
+
+![ioc2](./assets/lib/agentesla/ioc2.png)
+*Figure 24: More Informations*
+
+![ioc3](./assets/lib/agentesla/ioc3.png)
+*Figure 25: Exracting info from different browsers*
+
+## IOCs
+SMTP Server - `mail.cottondreams.org`
+Sender Mail - `kc@cottondreams.org`
+Receiver Mail - `admin@cottondreams.org`
+Port - `587`
+SMTP Auth Password - `PayDay2025`
