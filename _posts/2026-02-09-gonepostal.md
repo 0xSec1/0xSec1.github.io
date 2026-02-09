@@ -87,3 +87,29 @@ $env:USERNAME.wcyjpnuxotpaebuijrtn3urwx1zeg223v.oast.fun
 3e966f088d46a0eb482e3dc4af266c0f -> tmp7EC9.dll
 f8d9b7c864fb7558e8bad4cfb5c8e6ff -> testtemp.xls
 ```
+
+## Yara Rule
+```
+rule APT28_GonePostal {
+    meta:
+        description = "Detects APT28 GonePostal Outlook Backdoor via error logging format"
+        author = "0xSec"
+        date = "2026-02-10"
+
+    strings:
+        // The unique error logging tags
+        $err1 = " :::1::: "  // Startup Error
+        $err4 = " :::4::: "  // Runtime Error
+        $err8 = " :::8::: "  // Parsing Error
+        $err13 = " :::13::: " // Execution Error
+        $err15 = " :::15::: " // Upload Error
+        $err52 = " :::52::: " // File Chunking Error
+
+        $sig_nothing = "Nothing" ascii wide
+
+        $sig_part = "_part_last" ascii wide
+
+    condition:
+        (2 of ($err*)) or (1 of ($err*) and ($sig_nothing or $sig_part))
+}
+```
