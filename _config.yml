@@ -29,17 +29,17 @@ github:
   username: 0xSec1 # change to your GitHub username
 
 twitter:
-  username: 476Aman72974 # change to your Twitter username
+  username: xeroxsec # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 0xsec
+  name: 0xSec
   email: 0x.sec.aman@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
 
-    - https://twitter.com/476Aman72974 # change to your Twitter homepage
+    - https://twitter.com/xeroxsec # change to your Twitter homepage
     - https://github.com/0xSec1 # change to your GitHub homepage
 
     # Uncomment below to add more social links
