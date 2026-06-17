@@ -4,13 +4,13 @@
 
 <figure><img src="../.gitbook/assets/intro.webp" alt=""><figcaption></figcaption></figure>
 
-_Figure: MT7902 Linux Patch_
+<p align="center"><em>Figure: MT7902 Linux Patch</em></p>
 
 If you have a laptop (mine is Asus Vivobook go 15) with the MediaTek MT7902 network card, you already know the struggle for its driver support. Native support for this chip is missing from the mainline Linux kernel (_at least until Linux 7.x drops_). Out of the box, you get no WiFi and no Bluetooth in order to get your internet working either you have to go with external wifi adapter or USB tethering. But last month, we noted that Mediatek MT7902 WiFi 6E and Bluetooth 5.x chipset finally got drivers in mainline Linux, and should be part of the Linux 7.0 release. Fortunately, [hmtheyboy154](https://github.com/hmtheboy154) backported the drivers that you can compile out-of-tree drivers to get your hardware fully operational for kernel 6.6 to 6.19. This guide will walk you through compiling the drivers on Arch and Fedora, blacklisting conflicting Bluetooth modules, and setting up DKMS so your network card doesn't break every time you update your system.
 
 <figure><img src="../.gitbook/assets/lspci.png" alt=""><figcaption></figcaption></figure>
 
-_Figure: WiFi PCIe driver_
+<p align="center"><em>Figure: WiFi PCIe driver</em></p>
 
 > **Note:** this method only works with the PCIe driver, so if you own an SDIO module, you’d need to work out another solution.
 
@@ -64,11 +64,11 @@ sudo modprobe mt7902e
 
 <figure><img src="../.gitbook/assets/kernelLog.png" alt=""><figcaption></figcaption></figure>
 
-_Figure: Kernel Log_
+<p align="center"><em>Figure: Kernel Log</em></p>
 
 <figure><img src="../.gitbook/assets/wlan.png" alt=""><figcaption></figcaption></figure>
 
-_Figure: WiFi Working_
+<p align="center"><em>Figure: WiFi Working</em></p>
 
 ### Compiling Bluetooth Driver
 
@@ -92,11 +92,11 @@ sudo modprobe btusb_mt7902
 
 <figure><img src="../.gitbook/assets/blue.png" alt=""><figcaption></figcaption></figure>
 
-_Figure: Bluetooth loads successfully_
+<p align="center"><em>Figure: Bluetooth loads successfully</em></p>
 
 <figure><img src="../.gitbook/assets/blue1.png" alt=""><figcaption></figcaption></figure>
 
-_Figure: Bluetooth Working_
+<p align="center"><em>Figure: Bluetooth Working</em></p>
 
 ### Use DKMS(Crucial)
 
