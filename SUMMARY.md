@@ -6,10 +6,6 @@
 
 * [MT7902: A Complete WiFi & Bluetooth Guide for Arch and Fedora](blogs/2026-04-29-mt7902_installation_guide.md)
 
-## CTF WriteUps
-
-* [GameBoy (WHYCTF2025)](ctf-writeups/2025-08-12-gameboy.md)
-
 ## Malware Analysis
 
 * [WannaCry Analysis(Malware)](malware-analysis/2025-12-18-wannacry.md)
@@ -22,3 +18,7 @@
 * [Operation Ghazwa: Disecting APT36's RAT](malware-analysis/2026-02-14-apt36.md)
 * [AppDomain Hijacking: Analyzing a LNK malware](malware-analysis/2026-03-04-lnk_malware.md)
 * [RustyWater: Reverse Engineering MuddyWater’s Rust Toolkit](malware-analysis/2026-04-23-rustywater.md)
+
+## CTF WriteUps
+
+* [GameBoy (WHYCTF2025)](ctf-writeups/2025-08-12-gameboy.md)
