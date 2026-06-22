@@ -18,6 +18,7 @@
 * [Operation Ghazwa: Disecting APT36's RAT](malware-analysis/2026-02-14-apt36.md)
 * [AppDomain Hijacking: Analyzing a LNK malware](malware-analysis/2026-03-04-lnk_malware.md)
 * [RustyWater: Reverse Engineering MuddyWater’s Rust Toolkit](malware-analysis/2026-04-23-rustywater.md)
+* [Kimsuky Malware](malware-analysis/kimsuky-malware.md)
 
 ## CTF WriteUps
 
