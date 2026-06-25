@@ -1,5 +1,7 @@
 # Understanding macOS Binaries
 
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
 Unlike windows binaries (`.exe` _and_ `.dll`) Mac OS binaries are usually compiled in [Mach-O format](https://developer.apple.com/library/archive/documentation/Performance/Conceptual/CodeFootprint/Articles/MachOOverview.html) whether its a command-line tool, dynamic library (`.dylib`) or [kernel extension](http://www.macbreaker.com/2012/01/what-are-kexts.html) (`.kext`) they all share the exact same architecture.
 
 ### Universal Binaries (Fat Binaries)
