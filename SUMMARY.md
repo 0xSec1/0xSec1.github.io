@@ -5,6 +5,7 @@
 ## Blogs
 
 * [MT7902: A Complete WiFi & Bluetooth Guide for Arch and Fedora](blogs/2026-04-29-mt7902_installation_guide.md)
+* [Understanding macOS Binaries](blogs/understanding-macos-binaries.md)
 
 ## Malware Analysis
 
