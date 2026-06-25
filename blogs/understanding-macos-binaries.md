@@ -73,7 +73,7 @@ struct load_command {
 
 The main load command is `LC_SEGMENT/LC_SEGMENT_64` which tells kernel how to map binary from disk into the virtual memory.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/1000036239.png" alt=""><figcaption></figcaption></figure>
 
 For every segment, memory is loaded from `fileoff` at `vmaddr` , each segment’s page are initialized according to `initprot` which specify page protections `read/write/execute` but cannot exceed the `maxprot` .
 
