@@ -101,3 +101,4 @@ Once the kernel has mapped segments into memory,it doesn’t immediately run pro
 * XNU Source Code - [https://github.com/apple-oss-distributions/xnu](https://github.com/apple-oss-distributions/xnu)
 * Mac OS X and iOS Internals to the apple’s core by Jonathan Levin
 * [https://developer.apple.com/](https://developer.apple.com/)
+* OS X ABI - [https://github.com/aidansteele/osx-abi-macho-file-format-reference](https://github.com/aidansteele/osx-abi-macho-file-format-reference)
